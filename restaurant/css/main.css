@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Slabo 27px', serif;
+  font-family: 'Abel', sans-serif;
+}
+
+hr {
+  margin-top: 40px;
+}
+
+/*
+input[type=text]{
+  border: 2px solid lightgrey;
+  padding: 5px;
+}
+
+textarea {
+  margin-top: 10px;
+}
+
+*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 100px auto 125px;
+  grid-template-rows: 50px 250px auto 70px;
+  grid-template-areas:
+  'a b c'
+  'd d d'
+  'e e e'
+  'f f f'
+}
+
+.headerName{
+  grid-area: a;
+  align-self: center;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.headerGap{
+  grid-area: b;
+}
+
+.headerLink {
+  grid-area c;
+  font-size: 14px;
+  align-self: center;
+  text-align: center;
+}
+
+.headerLink ul{
+  list-style-type: none;
+}
+
+.headerLink li{
+  text-decoration: none;
+  margin-right: 5px;
+  float: left;
+}
+.headerLink a {
+  color: black;
+  text-decoration: none;
+}
+.headerLink a:hover {
+  color: grey;
+}
+
+
+
+.img{
+  grid-area: d;
+  background-image: url('../img/img1.jpg');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+
+
+.content{
+  grid-area: e;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.title{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu{
+  margin-top: 3em;
+}
+
+.menuBody{
+  margin-bottom: 40px;
+}
+
+.menuName {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.menuFood{
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 15;
+}
+
+.contact{
+  margin-top: 3em;
+}
+
+div button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  padding: .3em .7em;
+  background-color: lightgrey;
+}
+
+.footer {
+  grid-area: f;
+  background-color: lightgrey;
+  text-align: center;
+  display: block;
+}
+
+.footer p{
+  padding-top: 15px
+}
+
+    /*MEDIA */
+
+
+@media (min-width:801px){
+  .grid {
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+    grid-template-rows: 50px 75% 100px;
+    grid-template-areas:
+    'a b c'
+    'e e e'
+    'g g g'
+    'f f f'
+    width: 100vw;
+    height: 100vh;
+  }
+
+
+  .headerName{
+    font-size: 20px;
+  }
+
+}
