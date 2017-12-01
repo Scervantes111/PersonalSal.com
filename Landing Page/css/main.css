@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #ffffff;
+  font-family: 'Josefin Slab', serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(150px, auto);
+}
+
+
+.header{
+  display: none;
+  position: fixed;
+  width: 100;
+}
+/* Header */
+.grid1 {
+  grid-column: 1/9;
+  grid-row: 1fr;
+}
+
+/* Links */
+.grid2{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.sImage {
+  margin-left: 20px;
+}
+
+.list{
+  margin-top: 1.5em;
+}
+
+.list li {
+  list-style: none;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  font-size: 36px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.list li:hover {
+  background-color: orange;
+  transition-duration: .5s;
+}
+.list a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Content */
+.grid3{
+  grid-column: 4/7;
+  grid-row: 2/3;
+  margin-top: 2em;
+  font-family: 'Josefin Slab', serif;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.contentBody{
+  font-size: 24px;
+}
+
+.firstBody{
+  margin-bottom: 1.5em;
+}
+
+.secondBody a {
+  color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.secondBody a:hover {
+  background-color: orange;
+  transition-duration: .5s;
+}
+
+.thirdBody{
+  margin-top: 2em;
+  text-align: right;
+}
+
+/* empty Space */
+.grid4{
+  grid-column: 1/9;
+  grid-row: 3/5;
+}
+
+
+
+@media (max-width: 1024px){
+  /* This is to set the css to make it mobile friendly for tabs and phones.
+  Just need to move the header to full on top and center the text
+  try to use no JS. */
+
+  .grid {
+    grid-gap: 5px;
+    grid-auto-rows: minmax(75px, auto);
+  }
+
+  .grid2{
+    grid-column: 1/9;
+    grid-row: 1/2;
+  }
+
+  .sImage {
+    display: none;
+  }
+
+  .list li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 14px;
+    padding-right: 2px;
+    padding-left: 2px;
+    display: inline;
+  }
+
+  .grid3{
+    grid-column: 2/8;
+    grid-row: 2/3;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .contentBody{
+    font-size: 14px;
+  }
+
+
+}
